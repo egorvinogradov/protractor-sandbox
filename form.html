@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="no-js" ng-app="app"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title>FORM PAGE</title>
+    <meta content="width=device-width" name="viewport">
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"/>
+    <link href="/libs/angular-ui-grid/ui-grid.css" rel="stylesheet">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-touch.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.js"></script>
+    <script src="form-app.js"></script>
+</head>
+<div ng-controller="MainCtrl" style="width: 400px; height: 400px; margin: 0 auto; padding-top: 200px;">
+        <input ng-model="name" placeholder="name" ng-model-options="{debounce: 250}" style="display: block;">
+        <input class="test" placeholder="Age" type="number" ng-model="age" ng-change="checkAge()"  style="display: block;">
+        <input id="hometown" placeholder="hometown" ng-model="hometown"  style="display: block;">
+        <input type="button" value="Submit" ng-click="submitForm()"  style="display: block;">
+        <div ng-show="name">
+            Hello <span ng-bind="name"></span>
+        </div>
+        <div ng-show="error">
+            {{error}}
+        </div>
+        <div ng-show="formResults">
+            {{formResults}}
+        </div>
+</div>
+</body>
+</html>

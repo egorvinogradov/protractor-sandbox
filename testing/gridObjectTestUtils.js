@@ -1,6 +1,6 @@
 /* globals element, by */
 
-var gridTestUtils = require('./gridTestUtils.spec.js');
+var gridTestUtils = require('./gridTestUtils.js');
 
 function getProxyToRealMethod(gridId, method) {
     return function() {
