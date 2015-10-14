@@ -44,4 +44,9 @@ describe('first grid on the page, filtered by male by default', function () {
                 gridTestUtils.expectRowCount(gridId, 2);
             });
     });
+
+    it('a test can fail', function () {
+        expect(false).toBe(true);
+    });
+
 });
