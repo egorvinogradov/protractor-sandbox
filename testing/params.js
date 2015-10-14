@@ -9,7 +9,10 @@ exports.params = {
         'gridId': 'grid1'
     },
     'test2': {
-
+        invalid: 'Invalid age',
+        name: 'Josh',
+        age: 33,
+        hometown: 'Charleston'
     },
     'host': {
         'divshot': 3474,
