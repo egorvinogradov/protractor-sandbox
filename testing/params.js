@@ -10,7 +10,10 @@ exports.params = {
     },
     'test2': {
 
+    },
+    'host': {
+        'divshot': 3474,
+        'firebase': 5000
     }
-
 };
 

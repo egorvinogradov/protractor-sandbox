@@ -12,7 +12,6 @@ exports.config = {
     specs: ['e2e/**/*.spec.js'],
     allScriptsTimeout: 11000,
     getPageTimeout: 10000,
-    baseUrl: 'http://localhost:3474',
     params: params,
     restartBrowserBetweenTests: false,
     capabilities: {
@@ -21,7 +20,11 @@ exports.config = {
     onPrepare: function () {
         // Maximize the browser size.  Reduces scrolling for UI grid.
         browser.driver.manage().window().maximize();
-
-        browser.get('http://localhost:3474');
+        console.log(browser.params);
+        if (browser.params.port) {
+            browser.get('http://localhost:' + browser.params.port);
+        } else {
+            browser.get('http://localhost:' + browser.params.host.divshot);
+        }
     }
 };
