@@ -26,6 +26,4 @@ describe('test some base expectations', function () {
 
     });
 
-
-
 });
